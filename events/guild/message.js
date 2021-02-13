@@ -34,7 +34,7 @@ const validPermissions = [
 
 const cooldowns = new Map();
 
-module.exports = (Discord, client, message) => {
+module.exports = async (Discord, client, message) => {
 	const prefix = "!";
 
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -89,7 +89,7 @@ module.exports = (Discord, client, message) => {
 	//////////////////////////////////
 
 	try {
-		command.execute(message, args, client, Discord);
+		await command.execute(message, args, client, Discord);
 	} catch (err) {
 		message.reply("there was an error executing this command. 😫");
 		console.log(err);
