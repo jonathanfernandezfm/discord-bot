@@ -1,6 +1,7 @@
 module.exports = {
 	name: "auto-role",
 	description: "Auto role creator",
+	permissions: ["ADMINISTRATOR"],
 	help: "!auto-role emoji @role emoji @role",
 	execute: async (msg, args, client, Discord) => {
 		const emojis = args.filter((emoji, index) => !(index % 2));
