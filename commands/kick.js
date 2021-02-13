@@ -1,7 +1,7 @@
 module.exports = {
-	name: "kick",
-	description: "This command kicks a user",
-	help: "!kick @user",
+	name: 'kick',
+	description: 'This command kicks a user',
+	help: '!kick @user',
 	execute: async (msg, args, client, Discord) => {
 		const mention = msg.mentions.users.first();
 
@@ -11,7 +11,7 @@ module.exports = {
 
 			return msg.channel.send(`<${member.user.username}> has been kicked`);
 		} else {
-			msg.reply("use the correct format `!mute @user`");
+			msg.reply('use the correct format `!mute @user`');
 		}
 	},
 };

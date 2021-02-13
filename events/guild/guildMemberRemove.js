@@ -1,3 +1,3 @@
 module.exports = (Discord, client, guildMember) => {
-	console.log("Member removed " + guildMember.id);
+	console.log('Member removed ' + guildMember.id);
 };
